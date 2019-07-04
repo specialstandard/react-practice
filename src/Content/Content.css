@@ -16,6 +16,10 @@
   padding: 20px;
 }
 
+h1 {
+  line-height: 48px;
+}
+
 section {
   background: rgb(247, 247, 247);
   border-radius: 8px;
