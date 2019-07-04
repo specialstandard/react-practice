@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Content from './Content/Content';
+import spinner from './spinner.gif'
+import GoogleFontLoader from 'react-google-font-loader';
+import useFonts from './hooks/useFonts'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [currentFontSerif, currentFontSansSerif, currentFontMono, error, handleClick, isLoading] = useFonts();
+
+  if (isLoading) {
+    return <div className="loader"><img alt="Loading" src={spinner} /></div>
+  } else if (error) {
+    return <div>Error: {error}</div>
+  } else {
+    return (
+      <div className="app">
+        <GoogleFontLoader
+          fonts={[
+            {font: currentFontMono},
+            {font: currentFontSansSerif},
+            {font: currentFontSerif},
+          ]}
+        />
+        <Content fontSerif={currentFontSerif} fontSansSerif={currentFontSansSerif} fontMono={currentFontMono} handleClick={handleClick}/>
+      </div>
+    );
+  }
 }
 
 export default App;
