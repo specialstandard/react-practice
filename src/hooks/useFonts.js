@@ -10,7 +10,7 @@ export default function useFonts() {
   const [fontsSerif, setFontsSerif] = useState([]);
   const [fontsSansSerif, setFontsSansSerif] = useState([]);
   const [fontsMono, setFontsMono] = useState([]);
-  // Nova+Mono|Doppio+One|PT+Serif+Caption
+
   const [currentFontSerif, setCurrentFontSerif] = useState('PT Serif Caption');
   const [currentFontSansSerif, setCurrentFontSansSerif] = useState('Doppio One');
   const [currentFontMono, setCurrentFontMono] = useState('Nova Mono');
