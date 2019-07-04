@@ -1,11 +1,11 @@
-Font-Randomizer
-Hosted in the cloud in an AWS EC2 instance running on a node server:
-http://ec2-52-40-114-1.us-west-2.compute.amazonaws.com/font-randomizer/index.html
+Font-Randomizer<br>
+Hosted in the cloud in an AWS EC2 instance running on a node server:<br>
+http://ec2-52-40-114-1.us-west-2.compute.amazonaws.com/font-randomizer/index.html<br><br>
 
-Responsive, mobile-first design.
-Uses .env file for environment variables.
-Uses custom hooks.
-CSS and Linting best practices.
+Responsive, mobile-first design.<br>
+Uses .env file for environment variables.<br>
+Uses custom hooks.<br>
+CSS and Linting best practices.<br>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
