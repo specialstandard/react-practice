@@ -10,10 +10,10 @@ export default function useFonts() {
   const [fontsSerif, setFontsSerif] = useState([]);
   const [fontsSansSerif, setFontsSansSerif] = useState([]);
   const [fontsMono, setFontsMono] = useState([]);
-
-  const [currentFontSerif, setCurrentFontSerif] = useState('serif');
-  const [currentFontSansSerif, setCurrentFontSansSerif] = useState('san-serif');
-  const [currentFontMono, setCurrentFontMono] = useState('monospace');
+  // Nova+Mono|Doppio+One|PT+Serif+Caption
+  const [currentFontSerif, setCurrentFontSerif] = useState('PT Serif Caption');
+  const [currentFontSansSerif, setCurrentFontSansSerif] = useState('Doppio One');
+  const [currentFontMono, setCurrentFontMono] = useState('Nova Mono');
 
   useEffect(() => {
     axios.get(process.env.REACT_APP_API_URL).then(({data}) => {
